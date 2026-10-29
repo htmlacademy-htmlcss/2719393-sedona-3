@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>HTML Academy: Седона</title>
@@ -179,20 +180,17 @@
         </a>
       </footer>
     </div>
-    <div class="modal-container" id="search-modal-container">
+    <div class="modal-container modal-container-close " id="search-modal-container">
       <div class="modal">
-        <button class="modal-close-button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <section class="modal-contant">
+        <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="form-search" id="form-search" action="https://echo.htmlacademy.ru/" metod="post">
+          <form class="form-search" id="form-search" action="https://echo.htmlacademy.ru/" method="post">
             <div class="form-row">
               <label class="form-label" for="checkin">Дата Заезда:</label>
               <div>
                 <div class="date-control">
-                  <input class="date-input" type="text" id="checkin" name="checkin" value="27 апреля 2020" required>
-                  <span class="calendar-icon" aria-hidden="true">▦</span>
+                  <input class="date-input" type="text" id="checkin" name="checkin" placeholder="Укажите дату" required>
+                  <span class="calendar-icon" aria-hidden="true"></span>
                 </div>
                 <p class="form-message form-message-error">
                   Мы не можем отправить вас в прошлое.
@@ -203,8 +201,9 @@
               <label class="form-label" for="checkout">Дата Выезда:</label>
               <div>
                 <div class="date-control">
-                  <input class="date-input" type="text" id="checkout" name="checkout" value="1 сентября 2023" required>
-                  <span class="calendar-icon" aria-hidden="true">▦</span>
+                  <input class="date-input" type="text" id="checkout" name="checkout" placeholder="Укажите дату"
+                    required>
+                  <span class="calendar-icon" aria-hidden="true"></span>
                 </div>
                 <p class="form-message form-message-info">
                   На эти даты есть свободные номера. Пока есть.
@@ -217,11 +216,11 @@
                   Взрослые:
                 </label>
                 <div class="counter">
-                  <button class="counter-button" type="button" data-action="minus" data-target="adults"
-                    aria-label="Уменьшить количество взрослых">−</button>
+                  <button class="counter-button counter-button-minus" type="button" data-action="minus"
+                    data-target="adults" aria-label="Уменьшить количество взрослых"></button>
                   <input class="counter-input" type="number" id="adults" name="adults" value="2" min="1" max="20">
-                  <button class="counter-button" type="button" data-action="plus" data-target="adults"
-                    aria-label="Увеличить количество взрослых">+</button>
+                  <button class="counter-button counter-button-plus" type="button" data-action="plus"
+                    data-target="adults" aria-label="Увеличить количество взрослых"></button>
                 </div>
               </div>
               <div class="guests-group">
@@ -229,22 +228,28 @@
                   <label for="children">Дети:</label>
                   <div class="tooltip">
                     <button class="tooltip-toggle" type="button" aria-label="Информация о размещении детей"
-                      aria-describedby="children-tooltip">i</button>
+                      aria-describedby="children-tooltip"></button>
                     <span class="tooltip-text" id="children-tooltip" role="tooltip">
-                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                      размещаются бесплатно.
                     </span>
                   </div>
                 </div>
                 <div class="counter">
-            <button class="counter-button" type="button" data-action="minus" data-target="children" aria-label="Уменьшить количество детей">−</button>
-            <input class="counter-input" type="number" id="children" name="children"       value="2" min="0" max="20">
-            <button class="counter-button" type="button" data-action="plus"                data-target="children" aria-label="Увеличить количество детей">+</button>
-          </div>
-        </div>
-      </div>
-      <button class="search-button button-subscription" type="submit">
-        Найти
-      </button>
+                  <button class="counter-button counter-button-minus" type="button" data-action="minus"
+                    data-target="children" aria-label="Уменьшить количество детей"></button>
+                  <input class="counter-input" type="number" id="children" name="children" value="2" min="0" max="20">
+                  <button class="counter-button counter-button-plus" type="button" data-action="plus"
+                    data-target="children" aria-label="Увеличить количество детей"></button>
+                </div>
+              </div>
+            </div>
+            <button class="search-button button-subscription" type="submit">
+              Найти
+            </button>
+            <button class="modal-close-button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
           </form>
         </section>
       </div>

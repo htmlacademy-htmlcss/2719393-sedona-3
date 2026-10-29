@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Каталог гостиниц</title>
   </head>
@@ -11,19 +11,19 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a class="header-logo" href="index.html" aria-current="page">
+        <a class="header-logo" href="index.html">
           <img class="logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип компании" />
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="index.html" aria-current="page">Главная</a>
+              <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="about-sedona.html">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -53,7 +53,7 @@
                 <a class="breadcrumb-link" href="index.html"><span class="visually-hidden">Главная</span></a>
               </li>
               <li class="blreadcrumbs-item">
-                <a class="breadcrumb-link" href="#" aria-current="page">Гостиницы</a>
+                <span class="breadcrumb-link" aria-current="page">Гостиницы</span>
               </li>
             </ol>
           </nav>
@@ -108,15 +108,14 @@
 
                 <div class="filter-price-wrapper-left">
                   <label for="start-price" class="visually-hidden">Минимальная цена</label>
-                  <input class="input-price input-price-left" type="number" id="start-price" name="filter-price" placeholder="от"
-                    value="0" />
-                  <sapn class="input-suffix">от</sapn>
+                  <input class="input-price input-price-left" type="number" id="start-price" name="min-price" min="0"  value="0"/>
+                  <span class="input-suffix">от</span>
                 </div>
 
                 <div class="filter-price-wrapper-right">
                   <label for="end-price" class="visually-hidden">Максимальная цена</label>
-                  <input class="input-price input-price-right" type="number" id="end-price" name="filter-price" value="9000" />
-                  <sapn class="input-suffix">до</sapn>
+                  <input class="input-price input-price-right" type="number" id="end-price" name="max-price" min="0" value="9000"/>
+                  <span class="input-suffix">до</span>
                 </div>
 
                 <div class="range-scale">
@@ -176,7 +175,7 @@
             <span class="hotel-card-type hotel-card-price">От 4000 &#x20bd;</span>
             <a class="hotel-card-information" href="#">Подробнее</a>
             <button class="hotel-card-information hotel-link-box-blue" type="button">В избранное</button>
-            <div class="hotel-stars" data-stars="4" role="img" aria-label="Отель 4 звезды">
+            <div class="hotel-stars" data-stars="4" role="img" aria-label="4 звезды">
               <span class="visually-hidden">4 звезды</span>
             </div>
             <a class="hotel-card-information hotel-link-box-grey" href="#">РЕЙТИНГ: 8,5</a>
@@ -191,7 +190,7 @@
             <span class="hotel-card-type advantages-description">От 5000 &#x20bd;</span>
             <a class="hotel-card-information" href="#">Подробнее</a>
             <button class="hotel-card-information hotel-link-box-green" type="button">В избранном</button>
-            <div class="hotel-stars" data-stars="4" role="img" aria-label="Отель 4 звезды">
+            <div class="hotel-stars" data-stars="4" role="img" aria-label="4 звезды">
               <span class="visually-hidden">4 звезды</span>
             </div>
             <a class="hotel-card-information hotel-link-box-grey" href="#">РЕЙТИНГ: 9,2</a>
@@ -206,7 +205,7 @@
             <span class="hotel-card-type advantages-description">От 2500 &#x20bd;</span>
             <a class="hotel-card-information" href="#">Подробнее</a>
             <button class="hotel-card-information hotel-link-box-blue" type="button">В избранное</button>
-            <div class="hotel-stars" data-stars="3" role="img" aria-label="Отель 3 звезды">
+            <div class="hotel-stars" data-stars="3" role="img" aria-label="3 звезды">
               <span class="visually-hidden">3 звезды</span>
             </div>
             <a class="hotel-card-information hotel-link-box-grey" href="#">РЕЙТИНГ: 6,9</a>
@@ -221,7 +220,7 @@
             <span class="hotel-card-type advantages-description">От 1500 &#x20bd;</span>
             <a class="hotel-card-information" href="#">Подробнее</a>
             <button class="hotel-card-information hotel-link-box-blue" type="button">В избанное</button>
-            <div class="hotel-stars" data-stars="2" role="img" aria-label="Отель 2 звезды">
+            <div class="hotel-stars" data-stars="2" role="img" aria-label="2 звезды">
               <span class="visually-hidden">2 звезды</span>
             </div>
             <a class="hotel-card-information hotel-link-box-grey" href="#">РЕЙТИНГ: 5,0</a>
