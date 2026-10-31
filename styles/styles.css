@@ -328,7 +328,7 @@ body {
   margin-bottom: 18px;
   box-sizing: border-box;
   display: block;
-  font-family: var(--font-family);
+  font-family: var(--font-family), Arial, sans-serif;
 }
 
 .excerpt {
@@ -804,7 +804,7 @@ body {
 }
 
 .catalog-filter-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
